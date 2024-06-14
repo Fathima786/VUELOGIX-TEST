@@ -106,4 +106,12 @@ WebDriver driver;
 		loginafterlogout.click();
 	}
 
+	//screenshot of each input
+	public void screenshot(int i) throws IOException
+	{
+		File f=((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+		FileHandler.copy(f,new File("./screenshot"+i+".png"));
+		System.out.println("SCREENSHOT TAKEN AND SAVED");
+	}
+
 }
