@@ -23,6 +23,7 @@ public class TestClass extends BaseClass{
 			String emailinput=Excelutils.cellValue(floc, sheet, i, 0);
 			String passwordinput=Excelutils.cellValue(floc, sheet, i, 1);
 			page.logindetails(emailinput, passwordinput);
+			page.screenshot(i);
 			String s=page.checkvalid(emailinput, passwordinput);
 			if(s.equalsIgnoreCase("pass"))
 			{
